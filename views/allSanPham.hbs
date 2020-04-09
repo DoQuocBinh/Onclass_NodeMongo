@@ -9,13 +9,19 @@
 <body>
     <table width="50%" border="1">
         <tr>
+            <td>Id</td>
             <td>Ten SanPham</td>
             <td>Mau Sac</td>
+            <td>Price</td>
+            <td>Update</td>
         </tr>
         {{# each sanPham}}
         <tr>
+            <td>{{_id}}</td>
             <td>{{TenSP}}</td>
             <td>{{[MauSac]}}{{[Color]}}</td>
+            <td>{{Price}}</td>
+            <td><a href="/sanpham/edit?id={{_id}}">Update</a></td>
         </tr>  
         {{/each}}
     </table>
