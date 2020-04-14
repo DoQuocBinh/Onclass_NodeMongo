@@ -16,8 +16,11 @@ app.set('view engine','hbs');
 
 var indexController = require('./index.js');
 var sanPhamController = require('./sanPham.js');
+var uploadFileController= require('./uploadFile.js')
+
 
 app.use('/index',indexController);
 app.use('/sanpham',sanPhamController);
+app.use('/upload',uploadFileController);
 
 var server=app.listen(3000,function() {});
