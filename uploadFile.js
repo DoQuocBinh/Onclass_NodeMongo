@@ -44,7 +44,7 @@ router.post('/uploadphoto', upload.single('picture'), (req, res) => {
         console.log(result)
         if (err) return console.log(err)
         console.log('saved to database')
-        res.redirect('/upload')
+        res.redirect('/upload/viewAllPhotos')
     })
 })
 
@@ -74,7 +74,6 @@ router.get('/photo/:id', (req, res) => {
       res.contentType('image/jpeg');
       res.send(result.image.buffer)
       //res.render('viewImg',{img:result.image.buffer});
-  
     })
   })
 
