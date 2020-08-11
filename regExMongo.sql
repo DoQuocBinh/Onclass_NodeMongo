@@ -19,3 +19,12 @@ db.products.find( { description: { $regex: /line/ } } )
 
 //contains  m then any characters(.*) then 'line'
 db.products.find( { description: { $regex: /m.*line/, $options: 'si' } } )
+
+Example of using RegEx in NodeJS:
+https://xuguoming.wordpress.com/2015/02/11/using-variable-regex-with-mongodb-query-in-node-js/
+
+var search = 'Joe';
+db.users.find(name: new RegExp(search)) //For substring search, case sensitive. 
+db.users.find(name: new RegExp('^' + search + '$')) //For exact search, case sensitive
+db.users.find(name: new RegExp(search， ‘i')) //For substring search, case insensitive
+db.users.find(name: new RegExp('^' +search + '$', 'i')); //For exact search, case
